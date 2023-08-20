@@ -69,6 +69,11 @@
                 case 'setting-periode':
                   include '../views/periode/setting_periode.php';
                   break;
+
+                  // kriteria
+                case 'kriteria':
+                  include '../views/kriteria/kriteria.php';
+                  break;
               }
             }
 

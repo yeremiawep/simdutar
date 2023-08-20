@@ -44,7 +44,7 @@
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="index.php?page=kriteria">
       <i class="fas fa-fw fa-folder"></i>
       <span>Kriteria</span>
     </a>
