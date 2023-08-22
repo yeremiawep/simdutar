@@ -33,7 +33,7 @@ $query = mysqli_query($conn, "SELECT * FROM users");
                 <td><?= $q['nip']; ?></td>
                 <td><?= $q['jabatan']; ?></td>
                 <td>
-                  <a href="index.php?page=edit-pegawai&&id=<?= $q['id_users']; ?>" class="badge badge-sm badge-primary">Input Nilai</a>
+                  <a href="index.php?page=input-nilai&&id=<?= $q['id_users']; ?>" class="badge badge-sm badge-primary">Input Nilai</a>
                 </td>
               </tr>
             <?php endforeach; ?>

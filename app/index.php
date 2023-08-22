@@ -79,6 +79,9 @@
                 case 'penilaian':
                   include '../views/penilaian/penilaian_hrd.php';
                   break;
+                case 'input-nilai':
+                  include '../views/penilaian/form_input.php';
+                  break;
               }
             }
 
