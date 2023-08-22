@@ -71,6 +71,15 @@
   </li>
 
   <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <li class="nav-item">
+    <a class="nav-link" href="index.php?page=rekap-nilai">
+      <i class="fas fa-fw fa-folder"></i>
+      <span>Rekap Nilai</span></a>
+  </li>
+
+  <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
 
   <!-- Sidebar Toggler (Sidebar) -->

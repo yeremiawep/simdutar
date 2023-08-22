@@ -82,6 +82,11 @@
                 case 'input-nilai':
                   include '../views/penilaian/form_input.php';
                   break;
+
+                  // rekap nilai
+                case 'rekap-nilai':
+                  include '../views/rekap/rekap_nilai.php';
+                  break;
               }
             }
 

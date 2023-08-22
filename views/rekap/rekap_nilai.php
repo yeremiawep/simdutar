@@ -1,27 +1,25 @@
 <?php
 include '../config/database.php';
 
-$query = mysqli_query($conn, "SELECT * FROM users");
+$query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id_user=users.id_users JOIN periode ON penilaian.periode=periode.id_periode");
 
 ?>
 
 <div class="container">
-
-
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h5 class="m-0 font-weight-bold text-primary">Input Penilaian</h5>
+      <h5 class="m-0 font-weight-bold text-primary">Rekap Nilai</h5>
     </div>
     <div class="card-body">
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th width="5%">No.</th>
-              <th width="20%">Nama</th>
-              <th width="20%">NIP</th>
+              <th>No.</th>
+              <th>Nama</th>
               <th>Jabatan</th>
-              <th>Action</th>
+              <th>Total Nilai</th>
+              <th>Nilai Akhir</th>
             </tr>
           </thead>
           <tbody>
@@ -30,11 +28,9 @@ $query = mysqli_query($conn, "SELECT * FROM users");
               <tr>
                 <td><?= $no++; ?></td>
                 <td><?= $q['nama']; ?></td>
-                <td><?= $q['nip']; ?></td>
                 <td><?= $q['jabatan']; ?></td>
-                <td>
-                  <a href="index.php?page=input-nilai&&id=<?= $q['id_users']; ?>" class="btn btn-sm btn-primary"><i class="nav-icon fas fa-plus"></i> Input Nilai</a>
-                </td>
+                <td><?= $q['nilai']; ?></td>
+                <td><?= $q['nilai_akhir']; ?></td>
               </tr>
             <?php endforeach; ?>
           </tbody>

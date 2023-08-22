@@ -1,8 +1,11 @@
 <?php
 include '../config/database.php';
 
+$id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM kriteria");
-
+$nama = mysqli_query($conn, "SELECT * FROM users WHERE id_users='$id'");
+$n = mysqli_fetch_array($nama);
+$periode = mysqli_query($conn, "SELECT * FROM periode");
 ?>
 
 <div class="container-fluid">
@@ -14,17 +17,28 @@ $query = mysqli_query($conn, "SELECT * FROM kriteria");
     </div>
     <div class="card-body">
       <form action="../views/penilaian/func/hitung_nilai.php" method="post">
-        <div class="input-group mb-3 col-lg-6">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Nama</span>
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Nama</label>
+          <div class="col-sm-6">
+            <input type="text" id="" value="<?= $n['nama']; ?>" disabled>
           </div>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
         </div>
-        <div class="input-group mb-3 col-lg-6">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Jabatan</span>
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Jabatan</label>
+          <div class="col-sm-6">
+            <input type="text" id="" value="<?= $n['jabatan']; ?>" disabled>
           </div>
-          <input type="text" class="form-control" placeholder="Jabatan" aria-label="Jabatan" aria-describedby="basic-addon1">
+        </div>
+        <div class="form-group row">
+          <label for="periode" class="col-sm-2 col-form-label">Periode</label>
+          <div class="col-sm-4">
+            <select name="periode" id="periode" class="form-select rounded col-2 text-center" required>
+              <option selected disabled value="">--</option>
+              <?php foreach ($periode as $p) : ?>
+                <option value="<?= $p['id_periode']; ?>" <?= $p['status'] == 'Tidak Aktif' ? 'disabled' : '' ?>><?= $p['tahun']; ?> | <?= $p['status']; ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
         </div>
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
