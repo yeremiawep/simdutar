@@ -5,10 +5,12 @@ $query = mysqli_query($conn, "SELECT * FROM kriteria");
 
 ?>
 
-<div class="container">
+<div class="container-fluid">
+
+
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h5 class="m-0 font-weight-bold text-primary">Kriteria</h5>
+      <h5 class="m-0 font-weight-bold text-primary">Kriteria Penilaian</h5>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -16,9 +18,11 @@ $query = mysqli_query($conn, "SELECT * FROM kriteria");
           <thead>
             <tr>
               <th>No.</th>
-              <th>Kriteria</th>
-              <th>Nilai</th>
-              <th>Keterangan</th>
+              <th width="20%">Indikator Penilaian</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
             </tr>
           </thead>
           <tbody>
@@ -26,9 +30,11 @@ $query = mysqli_query($conn, "SELECT * FROM kriteria");
             <?php foreach ($query as $q) : ?>
               <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $q['nama_kriteria']; ?></td>
-                <td><?= $q['nilai']; ?></td>
-                <td><?= $q['keterangan']; ?></td>
+                <td><?= $q['kriteria']; ?></td>
+                <td><?= $q['nilai_1']; ?></td>
+                <td><?= $q['nilai_2']; ?></td>
+                <td><?= $q['nilai_3']; ?></td>
+                <td><?= $q['nilai_4']; ?></td>
               </tr>
             <?php endforeach; ?>
           </tbody>

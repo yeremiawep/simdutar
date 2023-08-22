@@ -45,10 +45,10 @@
                     </div>
                     <form class="user">
                       <div class="form-group">
-                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nomor Induk Pegawai">
+                        <input type="email" class="form-control form-control-user" name="nip" id="nip" aria-describedby="nip" placeholder="Nomor Induk Pegawai">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                        <input type="password" class="form-control form-control-user" name="password" id="password" placeholder="Password">
                       </div>
                       <a href="app/index.php" class="btn btn-primary btn-user btn-block">
                         Login

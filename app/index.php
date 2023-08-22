@@ -74,6 +74,11 @@
                 case 'kriteria':
                   include '../views/kriteria/kriteria.php';
                   break;
+
+                  // penilaian
+                case 'penilaian':
+                  include '../views/penilaian/penilaian_hrd.php';
+                  break;
               }
             }
 
