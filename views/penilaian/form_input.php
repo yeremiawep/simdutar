@@ -32,10 +32,10 @@ $periode = mysqli_query($conn, "SELECT * FROM periode");
         <div class="form-group row">
           <label for="periode" class="col-sm-2 col-form-label">Periode</label>
           <div class="col-sm-4">
-            <select name="periode" id="periode" class="form-select rounded col-2 text-center" required>
+            <select name="periode" id="periode" class="form-select rounded col-4 text-center" required>
               <option selected disabled value="">--</option>
               <?php foreach ($periode as $p) : ?>
-                <option value="<?= $p['id_periode']; ?>" <?= $p['status'] == 'Tidak Aktif' ? 'disabled' : '' ?>><?= $p['tahun']; ?> | <?= $p['status']; ?></option>
+                <option value="<?= $p['id_periode']; ?>" <?= $p['status'] == '0' ? 'disabled' : '' ?>><?= $p['tahun']; ?></option>
               <?php endforeach; ?>
             </select>
           </div>
