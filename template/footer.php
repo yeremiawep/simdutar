@@ -15,3 +15,6 @@
 <script src="../app/js/demo/chart-area-demo.js"></script>
 <script src="../app/js/demo/chart-pie-demo.js"></script>
 <script src="../app/js/demo/datatables-demo.js"></script>
+
+<script src="sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

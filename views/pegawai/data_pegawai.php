@@ -34,8 +34,8 @@ $query = mysqli_query($conn, "SELECT * FROM users");
                 <td><?= $q['nip']; ?></td>
                 <td><?= $q['jabatan']; ?></td>
                 <td>
-                  <a href="index.php?page=edit-pegawai&&id=<?= $q['id_users']; ?>" class="badge badge-sm badge-primary "><i class="fas fa-fw fa-pen"></i> Edit</a>
-                  <a href="../views/pegawai/func/delete.php?id=<?= $q['id_users']; ?>" class="badge badge-sm badge-danger" onclick="alert('Anda Yakin ?')"><i class="fas fa-fw fa-trash"></i> Delete</a>
+                  <a href="index.php?page=edit-pegawai&&id=<?= $q['id_users']; ?>" class="btn btn-sm btn-primary "><i class="fas fa-fw fa-pen"></i> Edit</a>
+                  <button class="btn btn-sm btn-danger" onClick="hapusData(<?= $q['id_users']; ?>)"><i class="fas fa-fw fa-trash"></i> Delete</button>
                 </td>
               </tr>
             <?php endforeach; ?>
@@ -45,3 +45,23 @@ $query = mysqli_query($conn, "SELECT * FROM users");
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function hapusData(data_id) {
+    // alert('Yakin Hapus ?');
+    // window.location=("../views/delete/delete_data_pegawai.php?id="+data_id);
+    Swal.fire({
+      title: 'Are you sure ?',
+      showDenyButton: false,
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.location = ("../views/pegawai/func/delete.php?id=" + data_id);
+        // Swal.fire('Saved!', '', 'success')
+      }
+    })
+  }
+</script>

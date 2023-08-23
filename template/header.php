@@ -17,4 +17,6 @@
   <!-- Datatables -->
   <link href="../app/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="sweetalert2.min.css">
+
 </head>
