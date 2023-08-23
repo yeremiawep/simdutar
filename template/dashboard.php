@@ -3,8 +3,10 @@ include '../config/database.php';
 
 $cpeg = mysqli_query($conn, "SELECT COUNT(nip) AS jml FROM users");
 $cjab = mysqli_query($conn, "SELECT COUNT(id_jabatan) AS jml FROM jabatan");
+$periode = mysqli_query($conn, "SELECT * FROM periode WHERE status=1");
 $view = mysqli_fetch_array($cpeg);
 $view2 = mysqli_fetch_array($cjab);
+$view3 = mysqli_fetch_array($periode);
 
 ?>
 
@@ -52,7 +54,7 @@ $view2 = mysqli_fetch_array($cjab);
       <div class="row no-gutters align-items-center">
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Periode</div>
-          <div class="h5 mb-0 font-weight-bold text-gray-800">2023</div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $view3['tahun']; ?></div>
         </div>
         <div class="col-auto">
           <i class="fas fa-comments fa-2x text-gray-300"></i>

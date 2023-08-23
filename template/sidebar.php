@@ -34,7 +34,7 @@
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link" href="index.php?page=data-jabatan">
-      <i class="fas fa-fw fa-wrench"></i>
+      <i class="fas fa-fw fa-briefcase"></i>
       <span>Data Jabatan</span>
     </a>
   </li>
@@ -66,7 +66,7 @@
   <!-- Nav Item - Tables -->
   <li class="nav-item">
     <a class="nav-link" href="index.php?page=periode">
-      <i class="fas fa-fw fa-table"></i>
+      <i class="fas fa-fw fa-calendar"></i>
       <span>Periode</span></a>
   </li>
 
@@ -75,7 +75,7 @@
 
   <li class="nav-item">
     <a class="nav-link" href="index.php?page=rekap-nilai">
-      <i class="fas fa-fw fa-folder"></i>
+      <i class="fas fa-fw fa-file"></i>
       <span>Rekap Nilai</span></a>
   </li>
 

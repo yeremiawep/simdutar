@@ -20,6 +20,8 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
               <th>Jabatan</th>
               <th>Total Nilai</th>
               <th>Nilai Akhir</th>
+              <th>Tahun</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +33,10 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
                 <td><?= $q['jabatan']; ?></td>
                 <td><?= $q['nilai']; ?></td>
                 <td><?= $q['nilai_akhir']; ?></td>
+                <td><?= $q['tahun']; ?></td>
+                <td>
+                  <a href="index.php?page=detail-nilai&&id=<?= $q['id_nilai']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-fw fa-eye"></i> Detail</a>
+                </td>
               </tr>
             <?php endforeach; ?>
           </tbody>
