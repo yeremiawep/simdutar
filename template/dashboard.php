@@ -21,7 +21,7 @@ $view3 = mysqli_fetch_array($periode);
           <div class="h5 mb-0 font-weight-bold"><?= $view['jml']; ?></div>
         </div>
         <div class="col-auto">
-          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+          <i class="fas fa-user fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@ $view3 = mysqli_fetch_array($periode);
           <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $view3['tahun']; ?></div>
         </div>
         <div class="col-auto">
-          <i class="fas fa-comments fa-2x text-gray-300"></i>
+          <i class="fas fa-calendar fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
