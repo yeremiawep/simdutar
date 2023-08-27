@@ -2,16 +2,17 @@
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?page=data-pegawai">
-    <div class="sidebar-brand-icon rotate-n-15">
+    <div class="sidebar-brand-icon">
+      <img src="../app/img/dtr2.png" width="200" height="120" alt="logo" class="mt-5">
     </div>
-    <div class="sidebar-brand-text mx-3">PT. Dutar Barokah Grup</div>
+    <!-- <div class="sidebar-brand-text mx-3">PT. Dutar Barokah Grup</div> -->
   </a>
 
   <!-- Divider -->
-  <hr class="sidebar-divider my-0">
+  <!-- <hr class="sidebar-divider my-0"> -->
 
   <!-- Nav Item - Dashboard -->
-  <li class="nav-item">
+  <li class="nav-item mt-5">
     <a class="nav-link" href="index.php?page=dashboard">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>

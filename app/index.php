@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+if (!$_SESSION['jabatan']) {
+  header('Location: ../');
+}
+
+?>
 
 <?php include '../template/header.php'; ?>
 
