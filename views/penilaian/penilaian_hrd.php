@@ -21,7 +21,7 @@ $query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=
               <th width="20%">Nama</th>
               <th width="20%">NIP</th>
               <th>Jabatan</th>
-              <th>Action</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -32,7 +32,7 @@ $query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=
                 <td><?= $q['nama']; ?></td>
                 <td><?= $q['nip']; ?></td>
                 <td><?= $q['jabatan']; ?></td>
-                <td>
+                <td class="text-center">
                   <a href="index.php?page=input-nilai&&id=<?= $q['id_users']; ?>" class="btn btn-sm rounded btn-primary"><i class="nav-icon fas fa-plus"></i> Input Nilai</a>
                 </td>
               </tr>

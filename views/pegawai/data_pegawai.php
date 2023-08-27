@@ -22,7 +22,7 @@ $query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=
               <th>Nama</th>
               <th>NIP</th>
               <th>Jabatan</th>
-              <th>Action</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -33,7 +33,7 @@ $query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=
                 <td><?= $q['nama']; ?></td>
                 <td><?= $q['nip']; ?></td>
                 <td><?= $q['jabatan']; ?></td>
-                <td>
+                <td class="text-center">
                   <a href="index.php?page=edit-pegawai&&id=<?= $q['id_users']; ?>" class="btn btn-sm btn-primary "><i class="fas fa-fw fa-pen"></i> Edit</a>
                   <button class="btn btn-sm btn-danger" onClick="hapusData(<?= $q['id_users']; ?>)"><i class="fas fa-fw fa-trash"></i> Delete</button>
                 </td>

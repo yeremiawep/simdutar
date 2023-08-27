@@ -21,7 +21,7 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
               <th>Total Nilai</th>
               <th>Nilai Akhir</th>
               <th>Tahun</th>
-              <th>Action</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -34,8 +34,9 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
                 <td><?= $q['nilai']; ?></td>
                 <td><?= $q['nilai_akhir']; ?></td>
                 <td><?= $q['tahun']; ?></td>
-                <td>
+                <td class="text-center">
                   <a href="index.php?page=detail-nilai&&id=<?= $q['id_nilai']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-fw fa-eye"></i> Detail</a>
+                  <button class="btn btn-sm btn-danger" onClick="hapusData(<?= $q['id_nilai']; ?>)"><i class="fas fa-fw fa-trash"></i> Delete</button>
                 </td>
               </tr>
             <?php endforeach; ?>
@@ -45,3 +46,23 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function hapusData(data_id) {
+    // alert('Yakin Hapus ?');
+    // window.location=("../views/delete/delete_data_pegawai.php?id="+data_id);
+    Swal.fire({
+      title: 'Are you sure ?',
+      showDenyButton: false,
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.location = ("../views/rekap/func/delete.php?id=" + data_id);
+        // Swal.fire('Saved!', '', 'success')
+      }
+    })
+  }
+</script>
