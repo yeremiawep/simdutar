@@ -1,7 +1,7 @@
 <?php
 include '../config/database.php';
 
-$query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id_user=users.id_users JOIN periode ON penilaian.periode=periode.id_periode");
+$query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id_user=users.id_users JOIN periode ON penilaian.periode=periode.id_periode LEFT JOIN jabatan ON users.jabatan=jabatan.id_jabatan");
 
 ?>
 
