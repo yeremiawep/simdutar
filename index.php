@@ -41,7 +41,10 @@
                 <div class="col-md-12">
                   <div class="p-5">
                     <div class="text-center">
-                      <h1 class="h4 text-gray-900 mb-4">PT. Dutar Barokah Grup</h1>
+                      <div class="sidebar-brand-icon">
+                        <img src="app/img/dtr2.png" width="200" height="120" alt="Dutar Barokah Grup">
+                      </div>
+                      <h1 class="h4 mb-4">PT. Dutar Barokah Grup</h1>
                     </div>
                     <form class="user" action="config/auth.php" method="POST">
                       <div class="form-group">
