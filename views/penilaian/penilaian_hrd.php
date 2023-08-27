@@ -1,7 +1,7 @@
 <?php
 include '../config/database.php';
 
-$query = mysqli_query($conn, "SELECT * FROM users");
+$query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=jabatan.id_jabatan");
 
 ?>
 
