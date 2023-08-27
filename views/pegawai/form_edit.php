@@ -2,7 +2,7 @@
 include '../config/database.php';
 
 $id = $_GET['id'];
-$query = mysqli_query($conn, "SELECT * FROM users WHERE id_users=$id");
+$query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=jabatan.id_jabatan WHERE id_users=$id");
 $jab = mysqli_query($conn, "SELECT * FROM jabatan");
 $q = mysqli_fetch_array($query);
 

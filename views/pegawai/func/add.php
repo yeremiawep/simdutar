@@ -15,7 +15,7 @@ $insert = mysqli_query($conn, "INSERT INTO users (id_users, nip, nama, jabatan) 
 if ($insert) {
   $_SESSION["sukses"] = 'Data Berhasil Disimpan';
 } else {
-  // $_SESSION["failed"] = 'Gagal Menyimpan Data';
+  $_SESSION["gagal"] = 'Gagal Menyimpan Data';
 }
 
 header('Location: ../../../app/index.php?page=data-pegawai');

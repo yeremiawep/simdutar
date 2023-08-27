@@ -19,7 +19,7 @@ $insert = mysqli_query($conn, "UPDATE users SET nip='$nip', nama='$nama', jabata
 if ($insert) {
   $_SESSION["sukses"] = 'Data Berhasil Disimpan';
 } else {
-  // $_SESSION["failed"] = 'Gagal Menyimpan Data';
+  $_SESSION["gagal"] = 'Gagal Menyimpan Data';
 }
 
 header('Location: ../../../app/index.php?page=data-pegawai');

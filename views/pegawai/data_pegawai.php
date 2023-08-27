@@ -65,3 +65,34 @@ $query = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=
     })
   }
 </script>
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- start nofit -->
+<?php if (@$_SESSION['sukses']) { ?>
+  <script>
+    Swal.fire({
+      text: "<?php echo $_SESSION['sukses']; ?>",
+      icon: "success",
+      customClass: {
+        confirmButton: "btn fw-bold btn-primary",
+        cancelButton: "btn fw-bold btn-active-light-primary"
+      }
+    })
+  </script>
+<?php unset($_SESSION['sukses']);
+} ?>
+
+<?php if (@$_SESSION['gagal']) { ?>
+  <script>
+    Swal.fire({
+      text: "<?php echo $_SESSION['gagal']; ?>",
+      icon: "error",
+      customClass: {
+        confirmButton: "btn fw-bold btn-primary",
+        cancelButton: "btn fw-bold btn-active-light-primary"
+      }
+    })
+  </script>
+<?php unset($_SESSION['gagal']);
+} ?>
+<!-- end notif -->

@@ -3,7 +3,7 @@ include '../config/database.php';
 
 $id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM kriteria");
-$nama = mysqli_query($conn, "SELECT * FROM users WHERE id_users='$id'");
+$nama = mysqli_query($conn, "SELECT * FROM users JOIN jabatan ON users.jabatan=jabatan.id_jabatan WHERE id_users='$id'");
 $n = mysqli_fetch_array($nama);
 $periode = mysqli_query($conn, "SELECT * FROM periode");
 ?>
