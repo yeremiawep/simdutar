@@ -94,6 +94,9 @@ if (!$_SESSION['jabatan']) {
                 case 'rekap-nilai':
                   include '../views/rekap/rekap_nilai.php';
                   break;
+                case 'detail-nilai':
+                  include '../views/rekap/detail/detail_nilai.php';
+                  break;
               }
             }
 

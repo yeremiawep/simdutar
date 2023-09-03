@@ -59,6 +59,7 @@ $periode = mysqli_query($conn, "SELECT * FROM periode");
                 <tr>
                   <td>
                     <input type="text" name="id_user[]" id="id_user[]" value="<?= $id; ?>" hidden>
+                    <input type="text" name="id_kriteria[]" id="id_kriteria[]" value="<?= $q['id_kriteria']; ?>" hidden>
                     <?= $no++; ?>
                   </td>
                   <td><?= $q['kriteria']; ?></td>
