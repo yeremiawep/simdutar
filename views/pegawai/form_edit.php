@@ -29,7 +29,7 @@ $q = mysqli_fetch_array($query);
           <select class="custom-select" name="jabatan" id="jabatan" required>
             <option selected="<?= $q['jabatan']; ?>"><?= $q['jabatan']; ?></option>
             <?php foreach ($jab as $j) : ?>
-              <option value="<?= $j['jabatan']; ?>"><?= $j['jabatan']; ?></option>
+              <option value="<?= $j['id_jabatan']; ?>"><?= $j['jabatan']; ?></option>
             <?php endforeach; ?>
           </select>
         </div>

@@ -2,6 +2,7 @@
 include '../config/database.php';
 
 $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id_user=users.id_users JOIN periode ON penilaian.periode=periode.id_periode LEFT JOIN jabatan ON users.jabatan=jabatan.id_jabatan");
+$periode = mysqli_query($conn, "SELECT * FROM periode");
 
 ?>
 
@@ -11,6 +12,19 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
       <h5 class="m-0 font-weight-bold text-primary">Rekap Nilai</h5>
     </div>
     <div class="card-body">
+      <div class="row px-3">
+        <label for="periode" class="col-form-label">Periode</label>
+        <form action="" method="POST" id="pilihPeriode">
+          <div class="col-12">
+            <select name="periode" id="periode" class="form-control form-control-sm mb-2" onchange="document.getElementById('pilihPeriode').submit()">
+              <option value="">-- Pilih Periode --</option>
+              <?php foreach ($periode as $p2) : ?>
+                <option value="<?= $p2['id_periode']; ?>"><?= $p2['tahun']; ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+        </form>
+      </div>
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>

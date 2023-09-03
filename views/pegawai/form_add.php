@@ -24,7 +24,7 @@ $query = mysqli_query($conn, "SELECT * FROM jabatan");
           <label for="jabatan">Jabatan</label>
           <select class="custom-select" name="jabatan" id="jabatan" required>
             <?php foreach ($query as $q) : ?>
-              <option value="<?= $q['jabatan']; ?>"><?= $q['jabatan']; ?></option>
+              <option value="<?= $q['id_jabatan']; ?>"><?= $q['jabatan']; ?></option>
             <?php endforeach; ?>
           </select>
         </div>
