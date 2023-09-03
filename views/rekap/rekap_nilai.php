@@ -35,7 +35,7 @@ $query = mysqli_query($conn, "SELECT * FROM penilaian JOIN users ON penilaian.id
                 <td><?= $q['nilai_akhir']; ?></td>
                 <td><?= $q['tahun']; ?></td>
                 <td class="text-center">
-                  <a href="index.php?page=detail-nilai&&id=<?= $q['id_nilai']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-fw fa-eye"></i> Detail</a>
+                  <a href="index.php?page=detail-nilai&&id=<?= $q['id_user']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-fw fa-eye"></i> Detail</a>
                   <button class="btn btn-sm btn-danger" onClick="hapusData(<?= $q['id_nilai']; ?>)"><i class="fas fa-fw fa-trash"></i> Delete</button>
                 </td>
               </tr>
