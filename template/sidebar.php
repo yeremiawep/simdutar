@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?page=data-pegawai">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?page=dashboard">
     <div class="sidebar-brand-icon">
       <img src="../app/img/dtr2.png" width="200" height="120" alt="logo" class="mt-5">
     </div>
